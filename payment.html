@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Thanh Toán - MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="payment.css" rel="stylesheet" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div id="payment-container">
+
+        <!-- HEADER -->
+
+        <div id="header">
+
+            <div id="logo">
+                MinMin Flower
+            </div>
+
+            <a href="index.html" style="text-decoration: none; color: #d4a5b7; font-weight: 500;">← Quay lại</a>
+
+            <div id="icon">
+                <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+                <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div id="content">
+
+            <!-- LEFT -->
+
+            <div id="left">
+
+                <h2 style="font-size: 28px; font-family: 'Playfair Display', serif; margin-bottom: 30px;">
+                    📦 Giỏ hàng của bạn
+                </h2>
+
+                <!-- PRODUCT -->
+
+                <div id="product-box">
+
+                    <div id="product-image"></div>
+
+                    <div id="product-info">
+
+                        <h3 id="flower-name" style="font-size: 22px; margin: 0 0 10px 0;">
+                            Luxury Rose
+                        </h3>
+
+                        <p id="quantity-text" style="color: #666; margin: 5px 0;">
+                            Số lượng: 1
+                        </p>
+
+                        <p id="price-text" style="color: #d4a5b7; font-weight: 600; margin: 5px 0;">
+                            Đơn giá: 950.000đ
+                        </p>
+
+                        <!-- WISH -->
+
+                        <p style="font-weight: 600; color: #333; margin: 20px 0 10px 0; font-size: 14px;">
+                            💬 Lời chúc (tùy chọn)
+                        </p>
+
+                        <textarea placeholder="Nhập lời chúc dành cho người nhận..." style="width: 100%; height: 100px; padding: 10px; border: 1px solid #e0d0d0; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
+
+                    </div>
+
+                </div>
+
+                <!-- DIVIDER -->
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #efd7d7;">
+
+                <!-- CONTACT -->
+
+                <h2 style="font-size: 22px; font-family: 'Playfair Display', serif; margin-bottom: 20px;">
+                    👤 Thông tin liên hệ
+                </h2>
+
+                <div style="display: grid; gap: 15px;">
+                    <input type="text" placeholder="Họ và tên *" style="padding: 12px; border: 1px solid #e0d0d0; border-radius: 8px; font-family: inherit;" required />
+                    <input type="tel" placeholder="Số điện thoại *" style="padding: 12px; border: 1px solid #e0d0d0; border-radius: 8px; font-family: inherit;" required />
+                    <input type="text" placeholder="Địa chỉ giao hàng *" style="padding: 12px; border: 1px solid #e0d0d0; border-radius: 8px; font-family: inherit;" required />
+                </div>
+
+                <!-- DIVIDER -->
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #efd7d7;">
+
+                <!-- PAYMENT -->
+
+                <h2 style="font-size: 22px; font-family: 'Playfair Display', serif; margin-bottom: 20px;">
+                    💳 Phương thức thanh toán
+                </h2>
+
+                <div id="payment-method" style="display: flex; flex-direction: column; gap: 15px;">
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 12px; border: 2px solid #efd7d7; border-radius: 8px; transition: 0.3s;">
+                        <input type="radio" name="pay" checked style="cursor: pointer;" />
+                        <span style="color: #333; font-weight: 500;">💰 Thanh toán khi nhận hàng</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 12px; border: 2px solid #efd7d7; border-radius: 8px; transition: 0.3s;">
+                        <input type="radio" name="pay" style="cursor: pointer;" />
+                        <span style="color: #333; font-weight: 500;">🏦 Chuyển khoản ngân hàng</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div id="right">
+
+                <h2 style="font-size: 28px; font-family: 'Playfair Display', serif; margin-bottom: 30px; text-align: center;">
+                    Tóm tắt đơn hàng
+                </h2>
+
+                <div class="price-row">
+                    <span>Tạm tính</span>
+                    <span id="sub-total" style="color: #d4a5b7; font-weight: 600;">
+                        950.000đ
+                    </span>
+                </div>
+
+                <div class="price-row">
+                    <span>Phí giao hàng</span>
+                    <span style="color: #d4a5b7; font-weight: 600;">
+                        30.000đ
+                    </span>
+                </div>
+
+                <div class="price-row" style="border-top: 2px solid #efd7d7; padding-top: 15px; margin-top: 15px;">
+                    <span style="font-size: 18px; font-weight: 600; color: #333;">Tổng cộng</span>
+                    <span id="total-price" style="font-size: 24px; color: #d4a5b7; font-weight: 700;">
+                        980.000đ
+                    </span>
+                </div>
+
+                <button id="order-btn" style="width: 100%; padding: 15px; margin-top: 30px; background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer; transition: 0.3s;">
+                    ✓ Đặt hàng ngay
+                </button>
+
+                <p style="text-align: center; color: #999; font-size: 12px; margin-top: 15px;">
+                    ✓ Hoa tươi 100% | ✓ Giao nhanh | ✓ Bảo vệ hoa
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        let quantity = params.get("quantity") || 1;
+
+        let flower = params.get("flower") || "rose";
+
+        const quantityText = document.getElementById("quantity-text");
+
+        const flowerName = document.getElementById("flower-name");
+
+        const productImage = document.getElementById("product-image");
+
+        const subTotal = document.getElementById("sub-total");
+
+        const totalPrice = document.getElementById("total-price");
+
+        quantityText.innerHTML = "Số lượng: " + quantity;
+
+        let name = "";
+
+        let image = "";
+
+        let price = 0;
+
+        if (flower == "rose") {
+
+            name = "Luxury Rose";
+
+            price = 950000;
+
+            image = "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=1200&auto=format&fit=crop";
+
+        }
+
+        if (flower == "tulip") {
+
+            name = "Pink Tulip";
+
+            price = 850000;
+
+            image = "https://images.unsplash.com/photo-1520763185298-1b434c919102?q=80&w=1200&auto=format&fit=crop";
+
+        }
+
+        if (flower == "sunflower") {
+
+            name = "Sun Flower";
+
+            price = 790000;
+
+            image = "https://images.unsplash.com/photo-1470509037663-253afd7f0f51?q=80&w=1200&auto=format&fit=crop";
+
+        }
+
+        flowerName.innerHTML = name;
+
+        productImage.style.backgroundImage = "url('" + image + "')";
+
+        let total = price * quantity;
+
+        let finalTotal = total + 30000;
+
+        subTotal.innerHTML = total.toLocaleString() + "đ";
+
+        totalPrice.innerHTML = finalTotal.toLocaleString() + "đ";
+
+        document.getElementById("order-btn").addEventListener("click", function () {
+
+            alert("Đặt hàng thành công! Cảm ơn bạn đã mua hàng tại MinMin Flower.");
+
+        });
+
+    </script>
+
+</body>
+</html>
+        let total = price * quantity;
+
+        let finalTotal = total + 30000;
+
+
+
+
+
+        subTotal.innerHTML =
+
+        total.toLocaleString() + "đ";
+
+
+
+        totalPrice.innerHTML =
+
+        finalTotal.toLocaleString() + "đ";
+
+
+
+
+
+        document.getElementById("order-btn")
+
+        .addEventListener("click", function () {
+
+            alert("Đặt hàng thành công!");
+
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Liên hệ - MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        .contact-container {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-header h1 {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .contact-header p {
+            font-size: 16px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #f8ecec 0%, #f5e0e0 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-box h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .contact-box a {
+            color: #d4a5b7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+            color: #c67f7f;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form h2 {
+            font-size: 28px;
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0d0d0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4a5b7;
+            box-shadow: 0 0 0 3px rgba(212, 165, 183, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 165, 183, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div id="header">
+
+        <div id="logo">
+
+            MinMin Flower
+
+        </div>
+
+        <ul id="menu">
+
+            <li><a href="index.html">Trang chủ</a></li>
+
+            <li><a href="products.html">Sản phẩm</a></li>
+
+            <li><a href="collection.html">Bộ sưu tập</a></li>
+
+            <li><a href="contact.html">Liên hệ</a></li>
+
+        </ul>
+
+        <div id="icon">
+
+            <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+            <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="contact-container">
+
+        <div class="contact-header">
+            <h1>Liên hệ với chúng tôi</h1>
+            <p>Chúng tôi rất vui khi nhận được thông tin từ các khách hàng. Hãy liên hệ qua các phương thức dưới đây để được hỗ trợ.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+                <h3>📍 Địa chỉ</h3>
+                <p>MinMin Flower Shop<br/>123 Đường Hoa Hồng<br/>Quận 1, TP. Hồ Chí Minh<br/>Việt Nam</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>📞 Điện thoại & Email</h3>
+                <p>📞 <a href="tel:0123456789">+84 (0)123 456 789</a><br/>📱 <a href="tel:0987654321">+84 (0)987 654 321</a><br/>✉️ <a href="mailto:hello@minminflower.com">hello@minminflower.com</a></p>
+            </div>
+
+            <div class="contact-box">
+                <h3>🕐 Giờ hoạt động</h3>
+                <p>Thứ 2 - Thứ 6: 8:00 - 20:00<br/>Thứ 7: 8:00 - 21:00<br/>Chủ nhật: 9:00 - 19:00</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>💬 Mạng xã hội</h3>
+                <p><a href="#">Facebook: MinMin Flower</a><br/><a href="#">Instagram: @minminflower</a><br/><a href="#">TikTok: @minminflower</a></p>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+            <h2>Gửi tin nhắn cho chúng tôi</h2>
+            <p style="text-align: center; color: #999; margin-bottom: 30px;">Chúng tôi sẽ phản hồi trong vòng 24 giờ</p>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Tên của bạn *</label>
+                    <input type="text" placeholder="Nhập tên đầy đủ" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Nhập email của bạn" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="tel" placeholder="Nhập số điện thoại (tùy chọn)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Chủ đề *</label>
+                    <input type="text" placeholder="Chủ đề của tin nhắn" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Nội dung *</label>
+                    <textarea placeholder="Nội dung tin nhắn chi tiết của bạn" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Gửi tin nhắn</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

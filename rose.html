@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Luxury Rose</title>
+
+    <meta charset="utf-8" />
+
+
+    <link href="detail.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+
+    <!-- TITLE -->
+
+    <h1 id="page-title">
+
+        CHI TIẾT HOA
+
+    </h1>
+
+
+
+
+
+    <!-- CONTAINER -->
+
+    <div id="detail-container">
+
+
+
+        <!-- LEFT -->
+
+        <div id="left">
+
+
+
+            <!-- IMAGE -->
+
+            <div id="detail-image" class="rose-image"></div>
+
+
+
+
+
+            <!-- RELATED -->
+
+            <h2 id="related-title">
+
+                Sản phẩm liên quan
+
+            </h2>
+
+
+
+            <div id="related">
+
+
+
+                <div class="related-item tulip-image"></div>
+
+                <div class="related-item orchid-image"></div>
+
+                <div class="related-item peony-image"></div>
+
+                <div class="related-item lotus-image"></div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- RIGHT -->
+
+        <div id="right">
+
+
+
+            <!-- FLOWER NAME -->
+
+            <h1 id="flower-name">
+
+                Luxury Rose
+
+            </h1>
+
+
+
+
+
+            <!-- DESCRIPTION -->
+
+            <p id="desc">
+
+                Hoa hồng sang trọng với
+                vẻ đẹp lãng mạn và tinh tế,
+                phù hợp cho các dịp đặc biệt.
+
+            </p>
+
+
+
+
+
+            <!-- PRICE -->
+
+            <p id="price">
+
+                950.000đ
+
+            </p>
+
+
+
+
+
+            <!-- QUANTITY -->
+
+            <div id="quantity-box">
+
+
+
+                <button onclick="minus()">
+
+                    -
+
+                </button>
+
+
+
+                <span id="quantity">
+
+                    1
+
+                </span>
+
+
+
+                <button onclick="plus()">
+
+                    +
+
+                </button>
+
+            </div>
+
+
+
+
+
+            <!-- ADD CART -->
+
+            <button id="cart-btn">
+
+                Thêm vào giỏ hàng
+
+            </button>
+
+
+
+
+
+            <!-- PAYMENT -->
+
+            <a href="payment.html">
+
+                <button id="payment-btn">
+
+                    Tiếp tục thanh toán
+
+                </button>
+
+            </a>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        let qty = 1;
+
+        const quantity = document.getElementById("quantity");
+
+
+
+        function plus() {
+
+            qty++;
+
+            quantity.innerHTML = qty;
+
+        }
+
+
+
+        function minus() {
+
+            if (qty > 1) {
+
+                qty--;
+
+                quantity.innerHTML = qty;
+
+            }
+
+        }
+
+
+
+        document.getElementById("cart-btn")
+
+            .addEventListener("click", function () {
+
+                alert("Đã thêm vào giỏ hàng");
+
+            });
+
+    </script>
+
+</body>
+</html>

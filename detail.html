@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Chi Tiết Sản phẩm - MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="detail.css" rel="stylesheet" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div id="header">
+
+        <div id="logo">
+
+            MinMin Flower
+
+        </div>
+
+        <a href="index.html" id="back" style="text-decoration: none; color: #d4a5b7; font-weight: 500; transition: 0.3s;">
+
+            ← Quay lại trang chủ
+
+        </a>
+
+        <div id="icon">
+
+            <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+            <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+
+        </div>
+
+    </div>
+
+    <!-- DETAIL -->
+
+    <div id="detail-container">
+
+        <!-- LEFT SECTION - IMAGE -->
+
+        <div id="left">
+
+            <div id="detail-image" style="background-image: url('Picture/z7833267716047_a2e44fa750cc83c1cd3c2216e47a5c00.jpg');"></div>
+
+        </div>
+
+        <!-- RIGHT SECTION - INFO -->
+
+        <div id="right">
+
+            <div style="margin-bottom: 20px;">
+                <span style="display: inline-block; background: #d4a5b7; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">SẢN PHẨM MỚI</span>
+            </div>
+
+            <h1 id="flower-name" style="font-size: 36px; font-family: 'Playfair Display', serif; margin-bottom: 10px;">Sweet Pink Flower</h1>
+
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <span style="color: #ffc107;">⭐⭐⭐⭐⭐</span>
+                <span style="color: #666;">(24 đánh giá)</span>
+            </div>
+
+            <p id="price" style="font-size: 32px; color: #d4a5b7; font-weight: 600; margin-bottom: 20px;">950.000đ</p>
+
+            <p id="desc" style="color: #666; line-height: 1.8; font-size: 15px; margin-bottom: 30px;">
+
+                Bó hoa mang phong cách nhẹ nhàng, tinh tế và sang trọng dành cho những dịp đặc biệt. 
+                Sản phẩm được chọn lọc từ những bông hoa tươi tốt nhất, đóng gói cẩn thận để bảo quản 
+                trong suốt quá trình vận chuyển.
+
+            </p>
+
+            <div style="background: #f8ecec; padding: 15px; border-radius: 8px; margin-bottom: 30px; font-size: 14px; color: #666;">
+                ✓ Hoa tươi 100% | ✓ Giao hàng nhanh | ✓ Bảo vệ hoa | ✓ Hỗ trợ 24/7
+            </div>
+
+            <!-- QUANTITY -->
+
+            <div style="margin-bottom: 25px;">
+                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 10px; color: #333;">Số lượng</label>
+                <div id="quantity-box" style="display: flex; align-items: center; gap: 15px; background: #f8ecec; width: fit-content; padding: 0; border-radius: 8px;">
+
+                    <button id="minus" style="background: transparent; border: none; padding: 10px 15px; font-size: 18px; cursor: pointer; color: #d4a5b7; font-weight: bold;">−</button>
+
+                    <span id="quantity" style="font-weight: 600; font-size: 16px; min-width: 30px; text-align: center;">1</span>
+
+                    <button id="plus" style="background: transparent; border: none; padding: 10px 15px; font-size: 18px; cursor: pointer; color: #d4a5b7; font-weight: bold;">+</button>
+
+                </div>
+            </div>
+
+            <!-- CART INFO -->
+
+            <div id="cart-info" style="background: white; border: 2px solid #efd7d7; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">Số lượng: <span id="sl" style="font-weight: 600; color: #333;">1</span></p>
+
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">Đơn giá: <span style="font-weight: 600; color: #333;">950.000đ</span></p>
+
+                <p style="margin: 0; color: #d4a5b7; font-size: 18px; font-weight: 600;">Tổng tiền: <span id="total">950.000đ</span></p>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <button id="cart-btn" style="width: 100%; padding: 15px; background: white; border: 2px solid #d4a5b7; color: #d4a5b7; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.3s; margin-bottom: 15px;">
+
+                🛒 Thêm vào giỏ hàng
+
+            </button>
+
+            <a href="payment.html" style="display: block; text-decoration: none;">
+
+                <button id="payment-btn" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%); color: white; font-size: 16px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;">
+
+                    💳 Tiếp tục thanh toán
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer style="margin-top: 80px;">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // Dữ liệu từng loại hoa
+        const flowerData = {
+            rose: {
+                name: "Bó Hoa Hồng Tình Yêu",
+                price: 950000,
+                image: "Picture/z7833267716047_a2e44fa750cc83c1cd3c2216e47a5c00.jpg",
+                meaning: "Tình yêu, đam mê, lãng mạn và quyến rũ",
+                description: "Bó hoa hồng tươi tắn, chọn lọc từ những bông hoa hồng nhập khẩu tốt nhất. Hoa hồng biểu tượng cho tình yêu chân thành và sự lãng mạn. Loài hoa này được sử dụng trong những dịp đặc biệt như Valentine, các bó hoa cầu hôn, và kỷ niệm năm ngày yêu nhau."
+            },
+            orchid: {
+                name: "Bó Hoa Lan Thanh Nhã",
+                price: 1200000,
+                image: "Picture/z7833305679782_2b04ea49cae6f93d60d32f0b84b3b13c.jpg",
+                meaning: "Sự tinh tế, thanh lịch, đẳng cấp và tình yêu quý báu",
+                description: "Hoa lan biểu tượng cho vẻ đẹp cao quý và thanh nhã. Với cánh hoa mềm mại và màu sắc độc đáo, hoa lan là lựa chọn hoàn hảo để tặng người mà bạn đánh giá cao. Hoa lan thích hợp cho những buổi gặp gỡ quan trọng và các dịp trang trọng."
+            },
+            daisy: {
+                name: "Bó Hoa Cúc Họa Mi Tươi Vui",
+                price: 650000,
+                image: "Picture/z7833452381081_2318b09de3ca552a49e075d803756dbb.jpg",
+                meaning: "Vui vẻ, sự trong sáng, hoà hợp và tuổi trẻ",
+                description: "Hoa cúc họa mi mang sắc vàng tươi sáng, biểu tượng cho niềm vui và sự lạc quan. Đây là loại hoa phù hợp để tặng bạn bè, đồng nghiệp, hoặc để trang trí không gian sống của bạn. Hoa cúc còn được biết đến với khả năng thanh lọc không khí tự nhiên."
+            },
+            tulip: {
+                name: "Bó Hoa Tulip Mộng Mơ",
+                price: 1100000,
+                image: "Picture/z7833452391551_15a79fe737204e470c58349183671623.jpg",
+                meaning: "Lộng lẫy, vẻ đẹp hoàn hảo, sự thanh lịch và yêu thương chân thành",
+                description: "Tulip là biểu tượng của mùa xuân và vẻ đẹp ngoài cùng. Với hình dáng thanh thoát và màu sắc rực rỡ, tulip thích hợp cho những dịp kỷ niệm, sinh nhật, hay để bày tỏ tình cảm sâu sắc của bạn."
+            },
+            sunflower: {
+                name: "Bó Hoa Hướng Dương Tràn Năng Lượng",
+                price: 850000,
+                image: "Picture/z7833452399347_a4333590bf660dfd45eaa6177a1c527a.jpg",
+                meaning: "Sự tích cực, năng lượng, sức khỏe và hạnh phúc",
+                description: "Hoa hướng dương biểu tượng cho mặt trời, mang theo niềm lạc quan và năng lượng tích cực. Đây là loại hoa hoàn hảo để tặng những người cần động lực, hoặc để trang trí không gian của bạn với sự sáng sủa và vui vẻ."
+            },
+            lavender: {
+                name: "Bó Hoa Lavender Thơm Ngát",
+                price: 780000,
+                image: "Picture/z7833452400997_97e81a3e1a8bf0dc0c4c24bb8e9bf04c.jpg",
+                meaning: "Sự thanhh bình, tinh tế, sạch sẽ và yêu thương êm ái",
+                description: "Hoa lavender nổi tiếng với hương thơm dịu nhẹ và màu tím nhạt thơm mộng. Biểu tượng cho sự bình yên và thư giãn, lavender là lựa chọn tuyệt vời để tặng người thân hay sử dụng trong thực hành thiền định. Hương thơm của lavender cũng giúp làm dịu cơn đau đầu và giảm căng thẳng."
+            },
+            lotus: {
+                name: "Hoa Sen Thiêng Liêng",
+                price: 2000000,
+                image: "Picture/z7833452409258_3074586df44bf4981e087d7cd12296b9.jpg",
+                meaning: "Sự tinh khôi, cao quý, khai minh và tâm linh",
+                description: "Hoa sen biểu tượng cho sự tinh khôi và tâm linh trong nhiều nền văn hóa, đặc biệt là ở Á Đông. Hoa sen nở từ bùn nhưng vẫn giữ được vẻ đẹp tinh tuyệt, biểu tượng cho sự siêu thoát. Hoa sen rất quý giá và thích hợp cho những dịp đặc biệt hoặc dùng trong các nghi lễ."
+            },
+            peony: {
+                name: "Bó Hoa Mẫu Đơn Sang Trọng",
+                price: 1450000,
+                image: "Picture/z7833452409782_0179cdd72bebff7fcaef0877d82641c6.jpg",
+                meaning: "Sự phú quý, thành công, tình yêu lãng mạn và hạnh phúc gia đình",
+                description: "Hoa mẫu đơn nở to, với những cánh hoa nhiều tầng tạo nên vẻ đẹp lộng lẫy. Biểu tượng cho sự phú quý và thịnh vượng, hoa mẫu đơn là lựa chọn phổ biến trong các hóa đơn cầu hôn và lễ cưới. Hoa mẫu đơn cũng biểu tượng cho tình yêu chân thành và hạnh phúc gia đình."
+            }
+        };
+
+        // Lấy flower type từ URL parameter
+        function getFlowerType() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('flower') || 'rose';
+        }
+
+        // Cập nhật thông tin hoa
+        function updateFlowerInfo() {
+            const flowerType = getFlowerType();
+            const flower = flowerData[flowerType] || flowerData.rose;
+
+            // Cập nhật hình ảnh
+            document.getElementById('detail-image').style.backgroundImage = `url('${flower.image}')`;
+
+            // Cập nhật tên hoa
+            document.getElementById('flower-name').textContent = flower.name;
+
+            // Cập nhật giá
+            document.getElementById('price').textContent = flower.price.toLocaleString('vi-VN') + 'đ';
+
+            // Cập nhật mô tả
+            document.getElementById('desc').innerHTML = `<strong>Ý nghĩa:</strong> ${flower.meaning}<br><br>${flower.description}`;
+
+            // Cập nhật giá trong giỏ hàng
+            document.querySelector('#cart-info p:nth-child(2)').innerHTML = `Đơn giá: <span style="font-weight: 600; color: #333;">${flower.price.toLocaleString('vi-VN')}đ</span>`;
+
+            // Reset và cập nhật tổng tiền
+            price = flower.price;
+            quantity = 1;
+            updatePrice();
+        }
+
+        // Gọi hàm cập nhật khi trang tải
+        document.addEventListener('DOMContentLoaded', updateFlowerInfo);
+
+        let quantity = 1;
+
+        let price = 950000;
+
+        let quantityText = document.getElementById("quantity");
+
+        let sl = document.getElementById("sl");
+
+        let total = document.getElementById("total");
+
+        function updatePrice() {
+
+            quantityText.innerHTML = quantity;
+
+            sl.innerHTML = quantity;
+
+            let sum = quantity * price;
+
+            total.innerHTML = sum.toLocaleString('vi-VN') + "đ";
+
+        }
+
+        document.getElementById("plus")
+
+        .addEventListener("click", function () {
+
+            quantity++;
+
+            updatePrice();
+
+        });
+
+        document.getElementById("minus")
+
+        .addEventListener("click", function () {
+
+            if (quantity > 1) {
+
+                quantity--;
+
+                updatePrice();
+
+            }
+
+        });
+
+        document.getElementById("cart-btn")
+
+        .addEventListener("click", function () {
+
+            const flowerType = getFlowerType();
+            const flower = flowerData[flowerType] || flowerData.rose;
+            
+            // Lấy giỏ hàng hiện tại từ localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Tạo object sản phẩm mới
+            const product = {
+                id: flowerType + '_' + Date.now(),
+                name: flower.name,
+                price: flower.price,
+                quantity: quantity,
+                image: flower.image,
+                flower: flowerType
+            };
+            
+            // Thêm vào giỏ hàng
+            cart.push(product);
+            
+            // Lưu vào localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            alert("Đã thêm " + quantity + " bó " + flower.name + " vào giỏ hàng!");
+
+        });
+
+    </script>
+
+</body>
+</html>

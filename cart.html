@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Giỏ hàng - MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        .cart-container {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cart-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .cart-header h1 {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .cart-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .cart-items {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 60px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .cart-empty h2 {
+            font-size: 32px;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .cart-empty p {
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .cart-empty a {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .cart-empty a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 165, 183, 0.3);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 150px 1fr 100px;
+            gap: 20px;
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item-info h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+
+        .item-info p {
+            font-size: 14px;
+            color: #999;
+            margin: 5px 0;
+        }
+
+        .item-price {
+            color: #d4a5b7;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: right;
+        }
+
+        .cart-summary {
+            background: linear-gradient(135deg, #f8ecec 0%, #f5e0e0 100%);
+            padding: 30px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+
+        .cart-summary h3 {
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin: 0 0 25px 0;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .summary-row.total {
+            border-top: 2px solid #efd7d7;
+            padding-top: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .summary-row.total span:last-child {
+            color: #d4a5b7;
+            font-size: 20px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 165, 183, 0.3);
+        }
+
+        .continue-shopping {
+            width: 100%;
+            padding: 12px;
+            background: white;
+            color: #d4a5b7;
+            border: 2px solid #d4a5b7;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .continue-shopping:hover {
+            background: #f8ecec;
+        }
+
+        @media (max-width: 768px) {
+            .cart-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-item {
+                grid-template-columns: 100px 1fr;
+            }
+
+            .item-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .item-price {
+                grid-column: 2;
+                text-align: left;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div id="header">
+
+        <div id="logo">
+
+            MinMin Flower
+
+        </div>
+
+        <ul id="menu">
+
+            <li><a href="index.html">Trang chủ</a></li>
+
+            <li><a href="products.html">Sản phẩm</a></li>
+
+            <li><a href="collection.html">Bộ sưu tập</a></li>
+
+            <li><a href="contact.html">Liên hệ</a></li>
+
+        </ul>
+
+        <div id="icon">
+
+            <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+            <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="cart-container">
+
+        <div class="cart-header">
+            <h1>🛒 Giỏ hàng của bạn</h1>
+            <p>Kiểm tra lại sản phẩm trước khi thanh toán</p>
+        </div>
+
+        <div class="cart-content">
+
+            <div class="cart-items" id="cart-items-container">
+
+                <div class="cart-empty">
+                    <h2>Giỏ hàng trống</h2>
+                    <p>Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy chọn những bó hoa yêu thích của bạn!</p>
+                    <a href="products.html">← Tiếp tục mua hàng</a>
+                </div>
+
+            </div>
+
+            <div class="cart-summary">
+
+                <h3>Tóm tắt đơn hàng</h3>
+
+                <div class="summary-row">
+                    <span>Số lượng sản phẩm</span>
+                    <span>0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tạm tính</span>
+                    <span>0đ</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Phí giao hàng</span>
+                    <span>Miễn phí (khi mua > 500k)</span>
+                </div>
+
+                <div class="summary-row total">
+                    <span>Tổng cộng</span>
+                    <span>0đ</span>
+                </div>
+
+                <button class="checkout-btn" onclick="alert('Vui lòng thêm sản phẩm vào giỏ hàng trước!')">
+                    Tiếp tục thanh toán
+                </button>
+
+                <button class="continue-shopping" onclick="location.href='products.html'">
+                    ← Tiếp tục mua sắm
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hàm định dạng tiền tệ
+        function formatPrice(price) {
+            return price.toLocaleString('vi-VN') + 'đ';
+        }
+
+        // Hàm tính tổng giỏ hàng
+        function calculateCartTotal() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let total = 0;
+            let itemCount = 0;
+
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                itemCount += item.quantity;
+            });
+
+            return { total, itemCount, items: cart };
+        }
+
+        // Hàm hiển thị giỏ hàng
+        function displayCart() {
+            const { total, itemCount, items } = calculateCartTotal();
+            const container = document.getElementById('cart-items-container');
+
+            if (items.length === 0) {
+                // Hiển thị giỏ hàng trống
+                container.innerHTML = `
+                    <div class="cart-empty">
+                        <h2>Giỏ hàng trống</h2>
+                        <p>Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy chọn những bó hoa yêu thích của bạn!</p>
+                        <a href="products.html">← Tiếp tục mua hàng</a>
+                    </div>
+                `;
+            } else {
+                // Hiển thị các sản phẩm trong giỏ hàng
+                let cartHTML = '';
+                items.forEach((item, index) => {
+                    cartHTML += `
+                        <div class="cart-item">
+                            <div class="item-image" style="background-image: url('${item.image}');"></div>
+                            <div class="item-info">
+                                <h3>${item.name}</h3>
+                                <p>Đơn giá: ${formatPrice(item.price)}</p>
+                                <p>Số lượng: <strong>${item.quantity}</strong></p>
+                                <button onclick="removeFromCart(${index})" style="background: #d4a5b7; color: white; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; margin-top: 5px; font-size: 12px;">Xóa</button>
+                            </div>
+                            <div class="item-price">${formatPrice(item.price * item.quantity)}</div>
+                        </div>
+                    `;
+                });
+                container.innerHTML = cartHTML;
+            }
+
+            // Cập nhật thóm tắt đơn hàng
+            const shippingFee = total > 500000 ? 0 : 30000;
+            const finalTotal = total + shippingFee;
+            
+            document.querySelector('.summary-row:nth-child(1) span:last-child').textContent = itemCount;
+            document.querySelector('.summary-row:nth-child(2) span:last-child').textContent = formatPrice(total);
+            document.querySelector('.summary-row:nth-child(3) span:last-child').textContent = shippingFee > 0 ? formatPrice(shippingFee) : 'Miễn phí';
+            document.querySelector('.summary-row.total span:last-child').textContent = formatPrice(finalTotal);
+
+            // Cập nhật nút checkout
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            if (items.length === 0) {
+                checkoutBtn.textContent = 'Tiếp tục thanh toán';
+                checkoutBtn.onclick = function() { alert('Vui lòng thêm sản phẩm vào giỏ hàng trước!'); };
+            } else {
+                checkoutBtn.textContent = 'Tiếp tục thanh toán';
+                checkoutBtn.onclick = function() { location.href = 'payment.html'; };
+            }
+        }
+
+        // Hàm xóa sản phẩm khỏi giỏ hàng
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        // Gọi hàm hiển thị khi trang tải
+        document.addEventListener('DOMContentLoaded', displayCart);
+    </script>
+
+</body>
+
+</html>

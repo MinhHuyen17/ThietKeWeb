@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Bộ sưu tập - MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        .collection-container {
+            padding: 60px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .collection-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .collection-header h1 {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .collection-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .collection-card {
+            background: linear-gradient(135deg, #f8ecec 0%, #f5e0e0 100%);
+            border-radius: 20px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collection-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .collection-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 165, 183, 0.2);
+        }
+
+        .collection-card h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .collection-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .collection-card .flowers {
+            font-size: 12px;
+            color: #d4a5b7;
+            font-weight: 500;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .collection-card a {
+            display: inline-block;
+            color: #d4a5b7;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .collection-card a:hover {
+            color: #c67f7f;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .collection-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div id="header">
+
+        <div id="logo">
+
+            MinMin Flower
+
+        </div>
+
+        <ul id="menu">
+
+            <li><a href="index.html">Trang chủ</a></li>
+
+            <li><a href="products.html">Sản phẩm</a></li>
+
+            <li><a href="collection.html">Bộ sưu tập</a></li>
+
+            <li><a href="contact.html">Liên hệ</a></li>
+
+        </ul>
+
+        <div id="icon">
+
+            <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+            <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="collection-container">
+
+        <div class="collection-header">
+            <h1>Bộ sưu tập đặc biệt</h1>
+            <p>Những bộ sưu tập hoa được thiết kế riêng để mang lại niềm vui và thẩm mỹ cho cuộc sống của bạn</p>
+        </div>
+
+        <div class="collection-grid">
+
+            <div class="collection-card">
+                <h3>💕 Bộ sưu tập Lãng mạn</h3>
+                <p>Với hoa hồng đỏ, mẫu đơn và những loài hoa thanh lịch, dành cho những dịp đặc biệt.</p>
+                <div class="flowers">Hoa Hồng • Mẫu Đơn • Hoa Đỏ</div>
+                <a href="detail.html">Xem chi tiết →</a>
+            </div>
+
+            <div class="collection-card">
+                <h3>☀️ Bộ sưu tập Vui vẻ</h3>
+                <p>Hoa hướng dương, tulip sặc sỡ mang đầy năng lượng tích cực và sự vui vẻ.</p>
+                <div class="flowers">Hoa Hướng Dương • Tulip • Màu Sáng</div>
+                <a href="detail.html">Xem chi tiết →</a>
+            </div>
+
+            <div class="collection-card">
+                <h3>🧘 Bộ sưu tập Yên tĩnh</h3>
+                <p>Hoa lavender và các loài hoa nhẹ nhàng giúp bạn thư giãn và lấy lại bình tĩnh.</p>
+                <div class="flowers">Hoa Lavender • Hoa Trắng • Hoa Tím</div>
+                <a href="detail.html">Xem chi tiết →</a>
+            </div>
+
+            <div class="collection-card">
+                <h3>👑 Bộ sưu tập Quý phái</h3>
+                <p>Hoa lan và những loài hoa tinh tế, bí ẩn dành cho những nhân vật đặc biệt.</p>
+                <div class="flowers">Hoa Lan • Hoa Cao Cấp • Hoa Tím</div>
+                <a href="detail.html">Xem chi tiết →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

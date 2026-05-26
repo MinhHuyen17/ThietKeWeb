@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Đăng nhập - MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8ecec 0%, #f5e0e0 100%);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .login-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(212, 165, 183, 0.2);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .login-header h1 {
+            font-size: 32px;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin: 0 0 15px 0;
+        }
+
+        .login-header p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0d0d0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #d4a5b7;
+            box-shadow: 0 0 0 3px rgba(212, 165, 183, 0.1);
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .remember-forgot a {
+            color: #d4a5b7;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+            color: #c67f7f;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 165, 183, 0.3);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            color: #ddd;
+        }
+
+        .divider span {
+            flex: 1;
+            height: 2px;
+            background: #efd7d7;
+        }
+
+        .divider p {
+            padding: 0 15px;
+            color: #999;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .social-login {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            padding: 12px;
+            border: 2px solid #efd7d7;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #333;
+        }
+
+        .social-btn:hover {
+            border-color: #d4a5b7;
+            background: #f8ecec;
+        }
+
+        .signup-link {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #d4a5b7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+            color: #c67f7f;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 40px 25px;
+            }
+
+            .social-login {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div id="header" style="position: absolute; top: 0; left: 0; right: 0; background: white; border-bottom: 1px solid #ead1d1;">
+
+        <div id="logo">
+
+            MinMin Flower
+
+        </div>
+
+        <ul id="menu">
+
+            <li><a href="index.html">Trang chủ</a></li>
+
+            <li><a href="products.html">Sản phẩm</a></li>
+
+            <li><a href="collection.html">Bộ sưu tập</a></li>
+
+            <li><a href="contact.html">Liên hệ</a></li>
+
+        </ul>
+
+        <div id="icon">
+
+            <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+            <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+
+        </div>
+
+    </div>
+
+    <!-- LOGIN FORM -->
+
+    <div class="login-wrapper" style="margin-top: 80px;">
+
+        <div class="login-container">
+
+            <div class="login-header">
+                <h1>Đăng nhập</h1>
+                <p>Chào mừng bạn quay lại MinMin Flower</p>
+            </div>
+
+            <form onsubmit="handleLogin(event)">
+
+                <div class="form-group">
+                    <label>Email hoặc Số điện thoại *</label>
+                    <input type="text" placeholder="Nhập email hoặc số điện thoại" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Mật khẩu *</label>
+                    <input type="password" placeholder="Nhập mật khẩu" required />
+                </div>
+
+                <div class="remember-forgot">
+                    <label style="display: flex; align-items: center; gap: 5px; cursor: pointer; margin: 0; font-weight: normal;">
+                        <input type="checkbox" style="width: 16px; height: 16px; cursor: pointer;" />
+                        Ghi nhớ tôi
+                    </label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Đăng nhập</button>
+
+            </form>
+
+            <div class="divider">
+                <span></span>
+                <p>Hoặc</p>
+                <span></span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn" onclick="alert('Tính năng này sẽ sớm được bật')">
+                    f Facebook
+                </button>
+                <button class="social-btn" onclick="alert('Tính năng này sẽ sớm được bật')">
+                    G Google
+                </button>
+            </div>
+
+            <div class="signup-link">
+                Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer style="margin-top: auto;">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('Đăng nhập thành công! Chào mừng bạn đến với MinMin Flower.');
+            // Có thể chuyển hướng sau khi đăng nhập thành công
+            // window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>

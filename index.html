@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>MinMin Flower</title>
+
+    <meta charset="utf-8" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+
+    <!-- HEADER -->
+
+    <div id="header">
+
+        <div id="logo">
+
+            MinMin Flower
+
+        </div>
+
+
+
+        <ul id="menu">
+
+            <li><a href="index.html">Trang chủ</a></li>
+
+            <li><a href="products.html">Sản phẩm</a></li>
+
+            <li><a href="collection.html">Bộ sưu tập</a></li>
+
+            <li><a href="contact.html">Liên hệ</a></li>
+
+        </ul>
+
+
+
+        <div id="icon">
+
+            <a href="cart.html" style="text-decoration: none; color: black; font-size: 24px;">🛒</a>
+            <a href="login.html" style="text-decoration: none; color: black; font-size: 24px; margin-left: 15px;">👤</a>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- SLIDER -->
+
+    <div id="slider">
+
+        <div id="overlay"></div>
+
+        <div id="slider-content">
+
+            <h1>
+
+                BỘ SƯU TẬP <br />
+                HOA TƯƠI MỚI
+
+            </h1>
+
+
+
+            <button>
+
+                Khám phá ngay
+
+            </button>
+
+        </div>
+
+
+
+        <p id="slogan">
+
+            "Cuộc sống là một bông hoa <br />
+            và tình yêu là mật ong"
+
+        </p>
+
+    </div>
+
+
+
+
+
+    <!-- CATEGORY -->
+
+    <div id="category">
+
+        <h2>Danh mục sản phẩm</h2>
+
+
+
+        <div id="category-slider">
+
+            <div id="category-track">
+
+
+
+                <a href="detail.html?flower=rose" class="category-item">
+
+                    <div class="category-image rose"></div>
+
+                    <p>Hoa Hồng</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=orchid" class="category-item">
+
+                    <div class="category-image orchid"></div>
+
+                    <p>Hoa Lan</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=daisy" class="category-item">
+
+                    <div class="category-image daisy"></div>
+
+                    <p>Hoa Cúc Họa Mi</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=tulip" class="category-item">
+
+                    <div class="category-image tulip"></div>
+
+                    <p>Hoa Tulip</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=sunflower" class="category-item">
+
+                    <div class="category-image sunflower"></div>
+
+                    <p>Hoa Hướng Dương</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=lavender" class="category-item">
+
+                    <div class="category-image lavender"></div>
+
+                    <p>Hoa Lavender</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=lotus" class="category-item">
+
+                    <div class="category-image lotus"></div>
+
+                    <p>Hoa Sen</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=peony" class="category-item">
+
+                    <div class="category-image peony"></div>
+
+                    <p>Hoa Mẫu Đơn</p>
+
+                </a>
+
+
+
+                <!-- LẶP -->
+
+                <a href="detail.html?flower=rose" class="category-item">
+
+                    <div class="category-image rose"></div>
+
+                    <p>Hoa Hồng</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=orchid" class="category-item">
+
+                    <div class="category-image orchid"></div>
+
+                    <p>Hoa Lan</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=tulip" class="category-item">
+
+                    <div class="category-image tulip"></div>
+
+                    <p>Hoa Tulip</p>
+
+                </a>
+
+
+
+                <a href="detail.html?flower=peony" class="category-item">
+
+                    <div class="category-image peony"></div>
+
+                    <p>Hoa Mẫu Đơn</p>
+
+                </a>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- PRODUCT -->
+
+    <div id="product">
+
+        <!-- FILTER -->
+
+        <div id="filter">
+
+            <div class="filter-header">
+                <h3>🔍 Bộ lọc</h3>
+                <a href="#" class="reset-filter">Đặt lại</a>
+            </div>
+
+            <!-- FILTER GROUP 1: LOẠI HOA -->
+
+            <div class="filter-group">
+
+                <h4 class="filter-group-title">Loại hoa</h4>
+
+                <div class="filter-options">
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Hoa Hồng</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Hoa Lan</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Hoa Cúc</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Hoa Tulip</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Hoa Lavender</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- FILTER GROUP 2: MỨC GIÁ -->
+
+            <div class="filter-group">
+
+                <h4 class="filter-group-title">Mức giá</h4>
+
+                <div class="filter-options">
+
+                    <label class="filter-item">
+                        <input type="radio" name="price" class="filter-radio" />
+                        <span>Dưới 500k</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="radio" name="price" class="filter-radio" />
+                        <span>500k - 1 triệu</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="radio" name="price" class="filter-radio" />
+                        <span>1 triệu - 2 triệu</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="radio" name="price" class="filter-radio" />
+                        <span>Trên 2 triệu</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- FILTER GROUP 3: ĐÁNH GIÁ -->
+
+            <div class="filter-group">
+
+                <h4 class="filter-group-title">Đánh giá</h4>
+
+                <div class="filter-options">
+
+                    <label class="filter-item">
+                        <input type="radio" name="rating" class="filter-radio" />
+                        <span>⭐⭐⭐⭐⭐ Tuyệt vời</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="radio" name="rating" class="filter-radio" />
+                        <span>⭐⭐⭐⭐ Tốt</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="radio" name="rating" class="filter-radio" />
+                        <span>⭐⭐⭐ Trung bình</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- FILTER GROUP 4: DỊPVỤ -->
+
+            <div class="filter-group">
+
+                <h4 class="filter-group-title">Dịp vụ</h4>
+
+                <div class="filter-options">
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Sinh nhật</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Cưới hỏi</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Tỏ tình</span>
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" class="filter-checkbox" />
+                        <span>Chia buồn</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <button class="apply-filter">Áp dụng bộ lọc</button>
+
+        </div>
+
+        <!-- PRODUCT LIST -->
+
+        <div id="product-list">
+
+            <h3>Sản phẩm nổi bật</h3>
+
+
+
+            <div id="product-grid">
+
+
+
+                <div class="card">
+
+                    <div class="card-image image1"></div>
+
+                    <p>Sweet Pink</p>
+
+                    <span>650.000đ</span>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="card-image image2"></div>
+
+                    <p>Lovely Flower</p>
+
+                    <span>750.000đ</span>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="card-image image3"></div>
+
+                    <p>Pink Garden</p>
+
+                    <span>850.000đ</span>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="card-image image4"></div>
+
+                    <p>Luxury Rose</p>
+
+                    <span>950.000đ</span>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="card-image image5"></div>
+
+                    <p>White Flower</p>
+
+                    <span>790.000đ</span>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="card-image image6"></div>
+
+                    <p>Romantic Box</p>
+
+                    <span>990.000đ</span>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌸 MinMin Flower</h3>
+                <p>Cửa hàng hoa tươi uy tín, mang đến những bó hoa đẹp nhất cho những dịp đặc biệt của bạn.</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">📱</a>
+                    <a href="#">@</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Danh Mục</h3>
+                <a href="products.html">Sản phẩm</a>
+                <a href="collection.html">Bộ sưu tập</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Bài viết</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Thông Tin</h3>
+                <a href="contact.html">Liên hệ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>📍 123 Đường Hoa, Q1, TP.HCM</p>
+                <p>📞 +84 (0)123 456 789</p>
+                <p>✉️ hello@minminflower.com</p>
+                <p>🕐 Mở 8:00 - 22:00 hàng ngày</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach(function (card) {
+
+            card.addEventListener("click", function () {
+
+                alert("Đã thêm vào giỏ hàng");
+
+            });
+
+        });
+
+    </script>
+
+    <!-- SLIDER AUTO ROTATE -->
+    <script>
+        // Danh sách hình ảnh cho slider
+        const sliderImages = [
+            "/Picture/z7833267716047_a2e44fa750cc83c1cd3c2216e47a5c00.jpg",
+            "/Picture/z7833305679782_2b04ea49cae6f93d60d32f0b84b3b13c.jpg",
+            "/Picture/z7833452381081_2318b09de3ca552a49e075d803756dbb.jpg",
+            "/Picture/z7833452391551_15a79fe737204e470c58349183671623.jpg",
+            "/Picture/z7833452399347_a4333590bf660dfd45eaa6177a1c527a.jpg",
+            "/Picture/z7833452400997_97e81a3e1a8bf0dc0c4c24bb8e9bf04c.jpg",
+            "/Picture/z7833452409258_3074586df44bf4981e087d7cd12296b9.jpg",
+            "/Picture/z7833452409782_0179cdd72bebff7fcaef0877d82641c6.jpg",
+            "/Picture/z7833452420980_db4b41e4efc80f2b4d314f48483b538c.jpg"
+        ];
+
+        let currentImageIndex = 0;
+        const sliderElement = document.getElementById("slider");
+
+        // Hàm thay đổi hình ảnh slider
+        function changeSliderImage() {
+            sliderElement.style.backgroundImage = `url('${sliderImages[currentImageIndex]}')`;
+            currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+        }
+
+        // Đổi hình ảnh mỗi 1 giây
+        setInterval(changeSliderImage, 1000);
+    </script>
+
+</body>
+
+</html>
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach(function (card) {
+
+            card.addEventListener("click", function () {
+
+                alert("Đã thêm vào giỏ hàng");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
