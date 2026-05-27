@@ -576,54 +576,6 @@
 
     </script>
 
-    <!-- SLIDER AUTO ROTATE -->
-    <script>
-        // Danh sách hình ảnh cho slider
-        const sliderImages = [
-            "/Picture/z7833267716047_a2e44fa750cc83c1cd3c2216e47a5c00.jpg",
-            "/Picture/z7833305679782_2b04ea49cae6f93d60d32f0b84b3b13c.jpg",
-            "/Picture/z7833452381081_2318b09de3ca552a49e075d803756dbb.jpg",
-            "/Picture/z7833452391551_15a79fe737204e470c58349183671623.jpg",
-            "/Picture/z7833452399347_a4333590bf660dfd45eaa6177a1c527a.jpg",
-            "/Picture/z7833452400997_97e81a3e1a8bf0dc0c4c24bb8e9bf04c.jpg",
-            "/Picture/z7833452409258_3074586df44bf4981e087d7cd12296b9.jpg",
-            "/Picture/z7833452409782_0179cdd72bebff7fcaef0877d82641c6.jpg",
-            "/Picture/z7833452420980_db4b41e4efc80f2b4d314f48483b538c.jpg"
-        ];
-
-        let currentImageIndex = 0;
-        const sliderElement = document.getElementById("slider");
-
-        // Hàm thay đổi hình ảnh slider
-        function changeSliderImage() {
-            sliderElement.style.backgroundImage = `url('${sliderImages[currentImageIndex]}')`;
-            currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
-        }
-
-        // Đổi hình ảnh mỗi 2 giây
-        setInterval(changeSliderImage, 2000);
-    </script>
-
 </body>
-
 </html>
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-        const cards = document.querySelectorAll(".card");
-
-        cards.forEach(function (card) {
-
-            card.addEventListener("click", function () {
-
-                alert("Đã thêm vào giỏ hàng");
-
-            });
-
-        });
-
-    </script>
-
-</body>
 </html>
