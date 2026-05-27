@@ -183,101 +183,6 @@
 
     <script>
 
-        // Dữ liệu từng loại hoa
-        const flowerData = {
-            rose: {
-                name: "Bó Hoa Hồng Tình Yêu",
-                price: 950000,
-                image: "Picture/z7833267716047_a2e44fa750cc83c1cd3c2216e47a5c00.jpg",
-                meaning: "Tình yêu, đam mê, lãng mạn và quyến rũ",
-                description: "Bó hoa hồng tươi tắn, chọn lọc từ những bông hoa hồng nhập khẩu tốt nhất. Hoa hồng biểu tượng cho tình yêu chân thành và sự lãng mạn. Loài hoa này được sử dụng trong những dịp đặc biệt như Valentine, các bó hoa cầu hôn, và kỷ niệm năm ngày yêu nhau."
-            },
-            orchid: {
-                name: "Bó Hoa Lan Thanh Nhã",
-                price: 1200000,
-                image: "Picture/z7833305679782_2b04ea49cae6f93d60d32f0b84b3b13c.jpg",
-                meaning: "Sự tinh tế, thanh lịch, đẳng cấp và tình yêu quý báu",
-                description: "Hoa lan biểu tượng cho vẻ đẹp cao quý và thanh nhã. Với cánh hoa mềm mại và màu sắc độc đáo, hoa lan là lựa chọn hoàn hảo để tặng người mà bạn đánh giá cao. Hoa lan thích hợp cho những buổi gặp gỡ quan trọng và các dịp trang trọng."
-            },
-            daisy: {
-                name: "Bó Hoa Cúc Họa Mi Tươi Vui",
-                price: 650000,
-                image: "Picture/z7833452381081_2318b09de3ca552a49e075d803756dbb.jpg",
-                meaning: "Vui vẻ, sự trong sáng, hoà hợp và tuổi trẻ",
-                description: "Hoa cúc họa mi mang sắc vàng tươi sáng, biểu tượng cho niềm vui và sự lạc quan. Đây là loại hoa phù hợp để tặng bạn bè, đồng nghiệp, hoặc để trang trí không gian sống của bạn. Hoa cúc còn được biết đến với khả năng thanh lọc không khí tự nhiên."
-            },
-            tulip: {
-                name: "Bó Hoa Tulip Mộng Mơ",
-                price: 1100000,
-                image: "Picture/z7833452391551_15a79fe737204e470c58349183671623.jpg",
-                meaning: "Lộng lẫy, vẻ đẹp hoàn hảo, sự thanh lịch và yêu thương chân thành",
-                description: "Tulip là biểu tượng của mùa xuân và vẻ đẹp ngoài cùng. Với hình dáng thanh thoát và màu sắc rực rỡ, tulip thích hợp cho những dịp kỷ niệm, sinh nhật, hay để bày tỏ tình cảm sâu sắc của bạn."
-            },
-            sunflower: {
-                name: "Bó Hoa Hướng Dương Tràn Năng Lượng",
-                price: 850000,
-                image: "Picture/z7833452399347_a4333590bf660dfd45eaa6177a1c527a.jpg",
-                meaning: "Sự tích cực, năng lượng, sức khỏe và hạnh phúc",
-                description: "Hoa hướng dương biểu tượng cho mặt trời, mang theo niềm lạc quan và năng lượng tích cực. Đây là loại hoa hoàn hảo để tặng những người cần động lực, hoặc để trang trí không gian của bạn với sự sáng sủa và vui vẻ."
-            },
-            lavender: {
-                name: "Bó Hoa Lavender Thơm Ngát",
-                price: 780000,
-                image: "Picture/z7833452400997_97e81a3e1a8bf0dc0c4c24bb8e9bf04c.jpg",
-                meaning: "Sự thanhh bình, tinh tế, sạch sẽ và yêu thương êm ái",
-                description: "Hoa lavender nổi tiếng với hương thơm dịu nhẹ và màu tím nhạt thơm mộng. Biểu tượng cho sự bình yên và thư giãn, lavender là lựa chọn tuyệt vời để tặng người thân hay sử dụng trong thực hành thiền định. Hương thơm của lavender cũng giúp làm dịu cơn đau đầu và giảm căng thẳng."
-            },
-            lotus: {
-                name: "Hoa Sen Thiêng Liêng",
-                price: 2000000,
-                image: "Picture/z7833452409258_3074586df44bf4981e087d7cd12296b9.jpg",
-                meaning: "Sự tinh khôi, cao quý, khai minh và tâm linh",
-                description: "Hoa sen biểu tượng cho sự tinh khôi và tâm linh trong nhiều nền văn hóa, đặc biệt là ở Á Đông. Hoa sen nở từ bùn nhưng vẫn giữ được vẻ đẹp tinh tuyệt, biểu tượng cho sự siêu thoát. Hoa sen rất quý giá và thích hợp cho những dịp đặc biệt hoặc dùng trong các nghi lễ."
-            },
-            peony: {
-                name: "Bó Hoa Mẫu Đơn Sang Trọng",
-                price: 1450000,
-                image: "Picture/z7833452409782_0179cdd72bebff7fcaef0877d82641c6.jpg",
-                meaning: "Sự phú quý, thành công, tình yêu lãng mạn và hạnh phúc gia đình",
-                description: "Hoa mẫu đơn nở to, với những cánh hoa nhiều tầng tạo nên vẻ đẹp lộng lẫy. Biểu tượng cho sự phú quý và thịnh vượng, hoa mẫu đơn là lựa chọn phổ biến trong các hóa đơn cầu hôn và lễ cưới. Hoa mẫu đơn cũng biểu tượng cho tình yêu chân thành và hạnh phúc gia đình."
-            }
-        };
-
-        // Lấy flower type từ URL parameter
-        function getFlowerType() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get('flower') || 'rose';
-        }
-
-        // Cập nhật thông tin hoa
-        function updateFlowerInfo() {
-            const flowerType = getFlowerType();
-            const flower = flowerData[flowerType] || flowerData.rose;
-
-            // Cập nhật hình ảnh
-            document.getElementById('detail-image').style.backgroundImage = `url('${flower.image}')`;
-
-            // Cập nhật tên hoa
-            document.getElementById('flower-name').textContent = flower.name;
-
-            // Cập nhật giá
-            document.getElementById('price').textContent = flower.price.toLocaleString('vi-VN') + 'đ';
-
-            // Cập nhật mô tả
-            document.getElementById('desc').innerHTML = `<strong>Ý nghĩa:</strong> ${flower.meaning}<br><br>${flower.description}`;
-
-            // Cập nhật giá trong giỏ hàng
-            document.querySelector('#cart-info p:nth-child(2)').innerHTML = `Đơn giá: <span style="font-weight: 600; color: #333;">${flower.price.toLocaleString('vi-VN')}đ</span>`;
-
-            // Reset và cập nhật tổng tiền
-            price = flower.price;
-            quantity = 1;
-            updatePrice();
-        }
-
-        // Gọi hàm cập nhật khi trang tải
-        document.addEventListener('DOMContentLoaded', updateFlowerInfo);
-
         let quantity = 1;
 
         let price = 950000;
@@ -328,29 +233,7 @@
 
         .addEventListener("click", function () {
 
-            const flowerType = getFlowerType();
-            const flower = flowerData[flowerType] || flowerData.rose;
-            
-            // Lấy giỏ hàng hiện tại từ localStorage
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            
-            // Tạo object sản phẩm mới
-            const product = {
-                id: flowerType + '_' + Date.now(),
-                name: flower.name,
-                price: flower.price,
-                quantity: quantity,
-                image: flower.image,
-                flower: flowerType
-            };
-            
-            // Thêm vào giỏ hàng
-            cart.push(product);
-            
-            // Lưu vào localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-            
-            alert("Đã thêm " + quantity + " bó " + flower.name + " vào giỏ hàng!");
+            alert("Đã thêm " + quantity + " bó hoa vào giỏ hàng!");
 
         });
 

@@ -262,7 +262,7 @@
 
         <div class="cart-content">
 
-            <div class="cart-items" id="cart-items-container">
+            <div class="cart-items">
 
                 <div class="cart-empty">
                     <h2>Giỏ hàng trống</h2>
@@ -353,92 +353,6 @@
             <p>&copy; 2026 MinMin Flower. All rights reserved. | Designed with ❤️</p>
         </div>
     </footer>
-
-    <script>
-        // Hàm định dạng tiền tệ
-        function formatPrice(price) {
-            return price.toLocaleString('vi-VN') + 'đ';
-        }
-
-        // Hàm tính tổng giỏ hàng
-        function calculateCartTotal() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let total = 0;
-            let itemCount = 0;
-
-            cart.forEach(item => {
-                total += item.price * item.quantity;
-                itemCount += item.quantity;
-            });
-
-            return { total, itemCount, items: cart };
-        }
-
-        // Hàm hiển thị giỏ hàng
-        function displayCart() {
-            const { total, itemCount, items } = calculateCartTotal();
-            const container = document.getElementById('cart-items-container');
-
-            if (items.length === 0) {
-                // Hiển thị giỏ hàng trống
-                container.innerHTML = `
-                    <div class="cart-empty">
-                        <h2>Giỏ hàng trống</h2>
-                        <p>Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy chọn những bó hoa yêu thích của bạn!</p>
-                        <a href="products.html">← Tiếp tục mua hàng</a>
-                    </div>
-                `;
-            } else {
-                // Hiển thị các sản phẩm trong giỏ hàng
-                let cartHTML = '';
-                items.forEach((item, index) => {
-                    cartHTML += `
-                        <div class="cart-item">
-                            <div class="item-image" style="background-image: url('${item.image}');"></div>
-                            <div class="item-info">
-                                <h3>${item.name}</h3>
-                                <p>Đơn giá: ${formatPrice(item.price)}</p>
-                                <p>Số lượng: <strong>${item.quantity}</strong></p>
-                                <button onclick="removeFromCart(${index})" style="background: #d4a5b7; color: white; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; margin-top: 5px; font-size: 12px;">Xóa</button>
-                            </div>
-                            <div class="item-price">${formatPrice(item.price * item.quantity)}</div>
-                        </div>
-                    `;
-                });
-                container.innerHTML = cartHTML;
-            }
-
-            // Cập nhật thóm tắt đơn hàng
-            const shippingFee = total > 500000 ? 0 : 30000;
-            const finalTotal = total + shippingFee;
-            
-            document.querySelector('.summary-row:nth-child(1) span:last-child').textContent = itemCount;
-            document.querySelector('.summary-row:nth-child(2) span:last-child').textContent = formatPrice(total);
-            document.querySelector('.summary-row:nth-child(3) span:last-child').textContent = shippingFee > 0 ? formatPrice(shippingFee) : 'Miễn phí';
-            document.querySelector('.summary-row.total span:last-child').textContent = formatPrice(finalTotal);
-
-            // Cập nhật nút checkout
-            const checkoutBtn = document.querySelector('.checkout-btn');
-            if (items.length === 0) {
-                checkoutBtn.textContent = 'Tiếp tục thanh toán';
-                checkoutBtn.onclick = function() { alert('Vui lòng thêm sản phẩm vào giỏ hàng trước!'); };
-            } else {
-                checkoutBtn.textContent = 'Tiếp tục thanh toán';
-                checkoutBtn.onclick = function() { location.href = 'payment.html'; };
-            }
-        }
-
-        // Hàm xóa sản phẩm khỏi giỏ hàng
-        function removeFromCart(index) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.splice(index, 1);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            displayCart();
-        }
-
-        // Gọi hàm hiển thị khi trang tải
-        document.addEventListener('DOMContentLoaded', displayCart);
-    </script>
 
 </body>
 
