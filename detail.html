@@ -53,7 +53,7 @@
 
         <div id="left">
 
-            <div id="detail-image" style="background-image: url('Picture/z7833305679782_2b04ea49cae6f93d60d32f0b84b3b13c.jpg');"></div>
+            <div id="detail-image"></div>
 
         </div>
 
@@ -72,7 +72,7 @@
                 <span style="color: #666;">(24 đánh giá)</span>
             </div>
 
-            <p id="price" style="font-size: 32px; color: #d4a5b7; font-weight: 600; margin-bottom: 20px;">950.000đ</p>
+            <p id="price" style="font-size: 32px; color: #d4a5b7; font-weight: 600; margin-bottom: 20px;">450.000đ</p>
 
             <p id="desc" style="color: #666; line-height: 1.8; font-size: 15px; margin-bottom: 30px;">
 
@@ -107,9 +107,9 @@
 
                 <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">Số lượng: <span id="sl" style="font-weight: 600; color: #333;">1</span></p>
 
-                <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">Đơn giá: <span style="font-weight: 600; color: #333;">950.000đ</span></p>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">Đơn giá: <span id="unit-price" style="font-weight: 600; color: #333;">450.000đ</span></p>
 
-                <p style="margin: 0; color: #d4a5b7; font-size: 18px; font-weight: 600;">Tổng tiền: <span id="total">950.000đ</span></p>
+                <p style="margin: 0; color: #d4a5b7; font-size: 18px; font-weight: 600;">Tổng tiền: <span id="total">450.000đ</span></p>
 
             </div>
 
@@ -183,58 +183,126 @@
 
     <script>
 
+        // Dữ liệu các loại hoa
+        const flowersData = {
+            rose: {
+                name: "Hoa Hồng",
+                image: "rose-image",
+                price: 450000,
+                desc: "Hoa hồng sang trọng với vẻ đẹp lãng mạn và tinh tế, phù hợp cho các dịp đặc biệt."
+            },
+            orchid: {
+                name: "Hoa Lan",
+                image: "orchid-image",
+                price: 500000,
+                desc: "Hoa lan thanh lịch với vẻ đẹp tinh tế và quý phái, tượng trưng cho sự hoàn hảo."
+            },
+            daisy: {
+                name: "Hoa Cúc Họa Mi",
+                image: "daisy-image",
+                price: 280000,
+                desc: "Hoa cúc họa mi nhỏ nhắn mang vẻ đẹp trong trẻo, dịu dàng và đầy thơ mộng."
+            },
+            tulip: {
+                name: "Hoa Tulip",
+                image: "tulip-image",
+                price: 320000,
+                desc: "Tulip nhẹ nhàng dành cho những khoảnh khắc lãng mạn, tượng trưng cho tình yêu chân thành."
+            },
+            sunflower: {
+                name: "Hoa Hướng Dương",
+                image: "sunflower-image",
+                price: 300000,
+                desc: "Hoa hướng dương tượng trưng cho hy vọng và năng lượng, mang lại niềm vui và rạng rỡ."
+            },
+            lavender: {
+                name: "Hoa Lavender",
+                image: "lavender-image",
+                price: 250000,
+                desc: "Hoa Lavender mang hương thơm nhẹ nhàng và vẻ đẹp tinh tế, phù hợp cho những món quà lãng mạn."
+            },
+            lotus: {
+                name: "Hoa Sen",
+                image: "lotus-image",
+                price: 270000,
+                desc: "Hoa sen mang vẻ đẹp thuần khiết, nhẹ nhàng và thanh tao, biểu tượng của sự bình yên."
+            },
+            peony: {
+                name: "Hoa Mẫu Đơn",
+                image: "peony-image",
+                price: 480000,
+                desc: "Hoa mẫu đơn tượng trưng cho sự sang trọng, giàu sang và hạnh phúc viên mãn."
+            },
+            baby: {
+                name: "Hoa Baby",
+                image: "baby-image",
+                price: 260000,
+                desc: "Hoa baby mang vẻ đẹp nhẹ nhàng, tinh khôi và thường được dùng trong các bó hoa cưới."
+            },
+            camelia: {
+                name: "Hoa Trà",
+                image: "camelia-image",
+                price: 420000,
+                desc: "Hoa trà mang vẻ đẹp quý phái, nhẹ nhàng và tượng trưng cho sự hoàn hảo tinh tế."
+            }
+        };
+
+        // Lấy query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const flowerType = urlParams.get('flower') || 'rose';
+
+        // Lấy dữ liệu sản phẩm
+        const flower = flowersData[flowerType] || flowersData['rose'];
+
+        // Cập nhật tên sản phẩm
+        document.getElementById('flower-name').textContent = flower.name;
+
+        // Cập nhật ảnh sản phẩm
+        const detailImage = document.getElementById('detail-image');
+        detailImage.classList.add(flower.image);
+
+        // Cập nhật giá
+        const priceElement = document.getElementById('price');
+        priceElement.textContent = flower.price.toLocaleString('vi-VN') + 'đ';
+
+        // Cập nhật mô tả
+        document.getElementById('desc').textContent = flower.desc;
+
+        // Khởi tạo các biến giá cho JavaScript
         let quantity = 1;
-
-        let price = 950000;
-
+        let price = flower.price;
         let quantityText = document.getElementById("quantity");
-
         let sl = document.getElementById("sl");
-
         let total = document.getElementById("total");
+        let unitPrice = document.getElementById("unit-price");
+
+        // Cập nhật giá đơn vị
+        unitPrice.textContent = flower.price.toLocaleString('vi-VN') + 'đ';
 
         function updatePrice() {
-
             quantityText.innerHTML = quantity;
-
             sl.innerHTML = quantity;
-
             let sum = quantity * price;
-
             total.innerHTML = sum.toLocaleString('vi-VN') + "đ";
-
         }
 
         document.getElementById("plus")
-
         .addEventListener("click", function () {
-
             quantity++;
-
             updatePrice();
-
         });
 
         document.getElementById("minus")
-
         .addEventListener("click", function () {
-
             if (quantity > 1) {
-
                 quantity--;
-
                 updatePrice();
-
             }
-
         });
 
         document.getElementById("cart-btn")
-
         .addEventListener("click", function () {
-
-            alert("Đã thêm " + quantity + " bó hoa vào giỏ hàng!");
-
+            alert("Đã thêm " + quantity + " bó " + flower.name.toLowerCase() + " vào giỏ hàng!");
         });
 
     </script>
