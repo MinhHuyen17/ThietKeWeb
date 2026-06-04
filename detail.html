@@ -121,15 +121,11 @@
 
             </button>
 
-            <a href="payment.html" style="display: block; text-decoration: none;">
+            <button id="payment-btn" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%); color: white; font-size: 16px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;">
 
-                <button id="payment-btn" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #d4a5b7 0%, #d8a6a6 100%); color: white; font-size: 16px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;">
+                💳 Tiếp tục thanh toán
 
-                    💳 Tiếp tục thanh toán
-
-                </button>
-
-            </a>
+            </button>
 
         </div>
 
@@ -286,6 +282,9 @@
             total.innerHTML = sum.toLocaleString('vi-VN') + "đ";
         }
 
+        // Cập nhật giá trị ban đầu
+        updatePrice();
+
         document.getElementById("plus")
         .addEventListener("click", function () {
             quantity++;
@@ -303,6 +302,11 @@
         document.getElementById("cart-btn")
         .addEventListener("click", function () {
             alert("Đã thêm " + quantity + " bó " + flower.name.toLowerCase() + " vào giỏ hàng!");
+        });
+
+        document.getElementById("payment-btn")
+        .addEventListener("click", function () {
+            window.location.href = "payment.html?flower=" + flowerType + "&quantity=" + quantity;
         });
 
     </script>
